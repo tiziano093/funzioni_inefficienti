@@ -19,7 +19,7 @@ def create_squares(n):
         squares.append(i * i)
     return squares
 
-def find_max_inefficient(lst):
+def find_max(lst):
     max_val = float('-inf')
     for num in lst:
         if num > max_val:
