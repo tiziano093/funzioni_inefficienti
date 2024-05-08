@@ -1,37 +1,59 @@
 import psutil
 from memory_profiler import memory_usage
 
+# Definisce una funzione per sommare tutti gli elementi di una lista
 def sum_list(lst):
-    total = 0
-    for i in lst:
-        total += i
-    return total
+    total = 0  # Inizializza la variabile total a 0
+    for number in lst:  # Cicla attraverso ogni elemento nella lista
+        total += number  # Aggiunge l'elemento corrente al totale
+    return total  # Restituisce il totale calcolato
 
+# Definisce una funzione per concatenare tutte le stringhe in una lista
 def concatenate_strings(lst):
-    result = ""
-    for item in lst:
-        result += item
-    return result
+    result = ""  # Inizializza una stringa vuota per il risultato
+    for string in lst:  # Cicla attraverso ogni stringa nella lista
+        result += string  # Aggiunge la stringa corrente al risultato
+    return result  # Restituisce la stringa concatenata
 
+# Definisce una funzione per creare una lista di quadrati dei numeri da 0 a n-1
 def create_squares(n):
-    squares = []
-    for i in range(n):
-        squares.append(i * i)
-    return squares
+    squares = []  # Crea una lista vuota per i quadrati
+    for i in range(n):  # Cicla da 0 a n-1
+        squares.append(i * i)  # Calcola il quadrato di i e lo aggiunge alla lista
+    return squares  # Restituisce la lista dei quadrati
 
+# Definisce una funzione per trovare il valore massimo in una lista
 def find_max(lst):
-    max_val = float('-inf')
-    for num in lst:
-        if num > max_val:
-            max_val = num
-    return max_val
+    if not lst:  # Controlla se la lista è vuota
+        return None  # Restituisce None se la lista è vuota
+    max_val = lst[0]  # Imposta il primo elemento come il valore massimo iniziale
+    for num in lst:  # Cicla attraverso ogni numero nella lista
+        if num > max_val:  # Se il numero corrente è maggiore del massimo trovato finora
+            max_val = num  # Aggiorna il massimo
+    return max_val  # Restituisce il valore massimo trovato
 
+# Definisce una funzione per filtrare i numeri pari in una lista
 def filter_evens(lst):
-    evens = []
-    for num in lst:
-        if num % 2 == 0:
-            evens.append(num)
-    return evens
+    evens = []  # Crea una lista vuota per i numeri pari
+    for num in lst:  # Cicla attraverso ogni numero nella lista
+        if num % 2 == 0:  # Controlla se il numero è pari
+            evens.append(num)  # Se è pari, lo aggiunge alla lista dei pari
+    return evens  # Restituisce la lista dei numeri pari
+
+# Definisce una funzione per calcolare la somma dei quadrati dei numeri in una lista
+def sum_of_squares(lst):
+    result = 0  # Inizializza il risultato a 0
+    for number in lst:  # Cicla attraverso ogni numero nella lista
+        result += number * number  # Aggiunge il quadrato del numero al risultato
+    return result  # Restituisce il risultato
+
+# Definisce una funzione per generare una lista di numeri pari fino a n
+def generate_evens(n):
+    evens = []  # Crea una lista vuota per i numeri pari
+    for i in range(n):  # Cicla da 0 a n
+        if i % 2 == 0:  # Controlla se il numero è pari
+            evens.append(i)  # Se è pari, lo aggiunge alla lista
+    return evens  # Restituisce la lista dei numeri pari
 
 def profile_function(func, *args):
     p = psutil.Process()
@@ -52,6 +74,12 @@ def test_functions():
     profile_function(create_squares, 5000)
     profile_function(find_max, lst)
     profile_function(filter_evens, lst)
+    profile_function(sum_of_squares, lst)
+    profile_function(generate_evens, 5000)
+    profile_function(duplicate_items, lst)
+    profile_function(count_occurrences, lst, 2500)
+    profile_function(reverse_string, concatenate_strings(str_lst))
+    profile_function(find_minimum, lst)
 
 if __name__ == "__main__":
     test_functions()
