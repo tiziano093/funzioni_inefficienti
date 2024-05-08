@@ -52,7 +52,7 @@ def test_functions():
     profile_function(concatenate_strings, str_lst)    
     profile_function(create_squares, 5000)
     profile_function(find_max, lst)
-    profile_function(filter_evens_efficient, lst)
+    profile_function(filter_evens, lst)
 
 if __name__ == "__main__":
     test_functions()
