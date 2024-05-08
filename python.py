@@ -1,19 +1,19 @@
 import psutil
 from memory_profiler import memory_usage
 
-def sum_list_inefficient(lst):
+def sum_list(lst):
     total = 0
     for i in lst:
         total += i
     return total
 
-def concatenate_strings_inefficient(lst):
+def concatenate_strings(lst):
     result = ""
     for item in lst:
         result += item
     return result
 
-def create_squares_inefficient(n):
+def create_squares(n):
     squares = []
     for i in range(n):
         squares.append(i * i)
@@ -26,7 +26,7 @@ def find_max_inefficient(lst):
             max_val = num
     return max_val
 
-def filter_evens_inefficient(lst):
+def filter_evens(lst):
     evens = []
     for num in lst:
         if num % 2 == 0:
