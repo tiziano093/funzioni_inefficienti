@@ -55,6 +55,39 @@ def generate_evens(n):
             evens.append(i)  # Se è pari, lo aggiunge alla lista
     return evens  # Restituisce la lista dei numeri pari
 
+# Funzione che duplica gli elementi di una lista
+def duplicate_items(lst):
+    duplicated = [] # Crea una lista vuota per i duplicati
+    for item in lst: # Cicla attraverso ogni elemento nella lista
+        duplicated.append(item) # Aggiunge l'elemento alla lista dei duplicati
+        duplicated.append(item)
+    return duplicated # Restituisce la lista dei duplicati
+
+# Funzione che conta le occorrenze di un elemento in una lista
+def count_occurrences(lst, element):
+    count = 0 # Inizializza il contatore a 0
+    for item in lst: # Cicla attraverso ogni elemento nella lista
+        if item == element: # Controlla se l'elemento corrente è uguale all'elemento passato
+            count += 1 # Se è uguale, incrementa il contatore
+    return count # Restituisce il contatore
+
+# Funzione che inverte una stringa
+def reverse_string(s):
+    reversed_string = "" # Inizializza una stringa vuota per il risultato
+    for char in s: # Cicla attraverso ogni carattere della stringa
+        reversed_string = char + reversed_string # Aggiunge il carattere alla stringa inversa
+    return reversed_string # Restituisce la stringa inversa
+
+# Funzione che trova il minimo in una lista
+def find_minimum(lst):
+    if not lst: # Controlla se la lista è vuota
+        return None # Restituisce None se la lista è vuota
+    min_val = lst[0] # Imposta il primo elemento come il valore minimo iniziale
+    for num in lst: # Cicla attraverso ogni numero nella lista
+        if num < min_val: # Se il numero corrente è minore del minimo trovato finora
+            min_val = num # Aggiorna il minimo
+    return min_val # Restituisce il valore minimo trovato
+
 def profile_function(func, *args):
     p = psutil.Process()
     p.cpu_percent(interval=None)      
