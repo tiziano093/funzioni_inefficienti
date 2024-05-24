@@ -1,5 +1,15 @@
+# Importa i moduli necessari per il monitoraggio delle prestazioni
 import psutil
 from memory_profiler import memory_usage
+
+# Spiegazione di 'range(n)':
+# 'range(n)' genera una sequenza di numeri da 0 a n-1. È utile per eseguire un'azione ripetute volte.
+
+# Spiegazione del loop 'for':
+# Un loop 'for' in Python permette di eseguire un blocco di codice più volte, una per ogni elemento in una sequenza.
+
+# Spiegazione dell'istruzione 'if':
+# 'if' permette di eseguire un blocco di codice solo se una certa condizione è vera. Ad esempio, 'if num % 2 == 0' controlla se un numero è pari.
 
 # Definisce una funzione per sommare tutti gli elementi di una lista
 def sum_list(lst):
