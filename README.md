@@ -76,14 +76,12 @@ Per eseguire il programma in locale, utilizzare il seguente comando:
 python python.py
 ```
 
-
 ### Costruire e Eseguire il Programma con Docker 
 Per costruire l'immagine Docker ed eseguire il programma, eseguire i seguenti comandi:
 ```
 docker build -t funzioni_inefficienti .
 docker run funzioni_inefficienti
 ```
-
 
 ### Pushare le Modifiche
 Dopo aver apportato le modifiche e verificato che funzionano correttamente, puoi pushare le modifiche al tuo branch:
@@ -116,5 +114,11 @@ Anche il linguaggio di programmazione può influire sull'uso delle risorse e sul
 
 # Obiettivo dell'Esercizio
 L'obiettivo di questo esercizio è migliorare l'efficienza delle funzioni nel file python.py e verificare che le modifiche rispettino le pratiche di green coding. Utilizza Docker per garantire che l'ambiente di esecuzione sia coerente e GitHub Actions per automatizzare la verifica delle modifiche.
+
+# Guida all'Ottimizzazione del Codice
+
+Abbiamo preparato una guida dettagliata per aiutarti a comprendere e ottimizzare il codice presente in questo progetto. La guida copre concetti fondamentali come l'uso di `range(n)`, i loop `for`, le istruzioni `if`, e molto altro.
+
+Puoi trovare la guida completa nel file [GUIDA.md](GUIDA.md).
 
 # Buon lavoro!
