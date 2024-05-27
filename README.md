@@ -47,7 +47,8 @@ python -m ensurepip --upgrade
 
 ### Clonare la Repository
 
-# se non hai git installato sulla tua macchina segui questo link https://github.com/git-for-windows/git/releases/download/v2.45.1.windows.1/Git-2.45.1-64-bit.exe
+# se non hai git installato sulla tua macchina segui questo link:
+- https://github.com/git-for-windows/git/releases/download/v2.45.1.windows.1/Git-2.45.1-64-bit.exe
 
 Per clonare la repository, eseguire il seguente comando:
 
