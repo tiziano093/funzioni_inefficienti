@@ -73,7 +73,7 @@ def count_occurrences(lst, element):
 #
 #
 def reverse_string(s):
-    return s[::-1] # slicing 
+    return s[::-1] # slicing.
 
 # Funzione che trova il minimo in una lista
 def find_minimum(lst):
