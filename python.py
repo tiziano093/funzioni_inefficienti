@@ -1,20 +1,15 @@
 # Importa i moduli necessari per il monitoraggio delle prestazioni
 import psutil
 from memory_profiler import memory_usage
+import numpy as np
 
 # Definisce una funzione per sommare tutti gli elementi di una lista
 def sum_list(lst):
-    total = 0  # Inizializza la variabile total a 0
-    for number in lst:  # Cicla attraverso ogni elemento nella lista
-        total += number  # Aggiunge l'elemento corrente al totale
-    return total  # Restituisce il totale calcolato
+    return np.sum(list)
 
 # Definisce una funzione per concatenare tutte le stringhe in una lista
 def concatenate_strings(lst):
-    result = ""  # Inizializza una stringa vuota per il risultato
-    for string in lst:  # Cicla attraverso ogni stringa nella lista
-        result += string  # Aggiunge la stringa corrente al risultato
-    return result  # Restituisce la stringa concatenata
+    return ''.join(lst)
 
 # Definisce una funzione per creare una lista di quadrati dei numeri da 0 a n-1
 def create_squares(n):
