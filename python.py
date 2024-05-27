@@ -35,18 +35,11 @@ def find_max(lst):
 
 # Definisce una funzione per filtrare i numeri pari in una lista
 def filter_evens(lst):
-    evens = []  # Crea una lista vuota per i numeri pari
-    for num in lst:  # Cicla attraverso ogni numero nella lista
-        if num % 2 == 0:  # Controlla se il numero è pari
-            evens.append(num)  # Se è pari, lo aggiunge alla lista dei pari
-    return evens  # Restituisce la lista dei numeri pari
+    return [num for num in lst if num % 2 == 0] 
 
 # Definisce una funzione per calcolare la somma dei quadrati dei numeri in una lista
 def sum_of_squares(lst):
-    result = 0  # Inizializza il risultato a 0
-    for number in lst:  # Cicla attraverso ogni numero nella lista
-        result += number * number  # Aggiunge il quadrato del numero al risultato
-    return result  # Restituisce il risultato
+    return sum(number * number for number in lst) #calcola il quadrato di ogni numero nella lista. sum: per fare la somma 
 
 # Definisce una funzione per generare una lista di numeri pari fino a n
 def generate_evens(n):
@@ -74,10 +67,7 @@ def count_occurrences(lst, element):
 
 # Funzione che inverte una stringa
 def reverse_string(s):
-    reversed_string = "" # Inizializza una stringa vuota per il risultato
-    for char in s: # Cicla attraverso ogni carattere della stringa
-        reversed_string = char + reversed_string # Aggiunge il carattere alla stringa inversa
-    return reversed_string # Restituisce la stringa inversa
+    return ''.join(reversed(s)) #reversed restituisce un iteratore che scorre la stringa al contrario 
 
 # Funzione che trova il minimo in una lista
 def find_minimum(lst):
