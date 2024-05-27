@@ -34,10 +34,14 @@ def find_max(lst):
     return max_val  # Restituisce il valore massimo trovato
 
 # Definisce una funzione per filtrare i numeri pari in una lista
+#
+#
 def filter_evens(lst):
     return [num for num in lst if num % 2 == 0] 
 
 # Definisce una funzione per calcolare la somma dei quadrati dei numeri in una lista
+#
+#
 def sum_of_squares(lst):
     return sum(number * number for number in lst) #calcola il quadrato di ogni numero nella lista. sum: per fare la somma 
 
@@ -66,6 +70,8 @@ def count_occurrences(lst, element):
     return count # Restituisce il contatore
 
 # Funzione che inverte una stringa
+#
+#
 def reverse_string(s):
     return ''.join(reversed(s)) #reversed restituisce un iteratore che scorre la stringa al contrario 
 
