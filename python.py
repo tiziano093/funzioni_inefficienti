@@ -81,13 +81,8 @@ def reverse_string(s):
 
 # Funzione che trova il minimo in una lista
 def find_minimum(lst):
-    if not lst: # Controlla se la lista è vuota
-        return None # Restituisce None se la lista è vuota
-    min_val = lst[0] # Imposta il primo elemento come il valore minimo iniziale
-    for num in lst: # Cicla attraverso ogni numero nella lista
-        if num < min_val: # Se il numero corrente è minore del minimo trovato finora
-            min_val = num # Aggiorna il minimo
-    return min_val # Restituisce il valore minimo trovato
+    min_val = min(lst) 
+    return min_val 
 
 def profile_function(func, *args):
     p = psutil.Process()
